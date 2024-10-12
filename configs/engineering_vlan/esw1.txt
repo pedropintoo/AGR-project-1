@@ -1,0 +1,24 @@
+vlan database
+vlan 2
+exit
+
+conf t
+no ip routing
+
+interface vlan 2
+no shut
+
+int range f1/2 - 3
+no shut
+switchport mode access
+switchport access vlan 2
+
+int range f1/0 - 1
+switchport mode trunk
+switchport trunk allowed vlan 2,1002-1005
+switchport trunk encapsulation dot1q
+
+end 
+write
+
+
