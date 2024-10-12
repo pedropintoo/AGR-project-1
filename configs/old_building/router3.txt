@@ -1,0 +1,28 @@
+conf t
+
+int f0/0
+ip address 192.168.2.3 255.255.255.192
+ipv6 address 2100:100:100:2::3/80
+no shutdown
+
+inf f0/1
+ip address 192.168.2.131 255.255.255.192
+ipv6 address 2100:100:100:2:2::3/80
+no shutdown
+
+router rip
+version 2
+network 192.168.2.0
+no auto-summary
+
+ipv6 router rip RIPNG
+
+int f0/0
+ipv6 rip RIPNG enable
+
+int f0/1
+ipv6 rip RIPNG enable
+
+end
+write
+

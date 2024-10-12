@@ -1,0 +1,18 @@
+2024-10-12T09:15:47.350Z HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+2024-10-12T09:15:47.350Z HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 38699.
+2024-10-12T09:15:47.356Z HYPERVISOR: exec_cmd: hypervisor version 
+2024-10-12T09:15:47.357Z HYPERVISOR: exec_cmd: hypervisor working_dir /home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips 
+2024-10-12T09:15:47.357Z GENERAL: working_dir=/home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips
+2024-10-12T09:15:47.357Z HYPERVISOR: exec_cmd: ethsw create SW8 
+2024-10-12T09:15:49.737Z HYPERVISOR: exec_cmd: nio create_udp udp-9969cc54-f096-41a8-9a19-28b68d89d9a7 10028 127.0.0.1 10029 
+2024-10-12T09:15:49.738Z HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-9969cc54-f096-41a8-9a19-28b68d89d9a7 
+2024-10-12T09:15:49.741Z HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-9969cc54-f096-41a8-9a19-28b68d89d9a7 1 
+2024-10-12T09:15:49.877Z HYPERVISOR: exec_cmd: nio create_udp udp-1770751c-d20b-42aa-aa4d-080b804ea893 10031 127.0.0.1 10030 
+2024-10-12T09:15:49.878Z HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-1770751c-d20b-42aa-aa4d-080b804ea893 
+2024-10-12T09:15:49.882Z HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-1770751c-d20b-42aa-aa4d-080b804ea893 1 
+2024-10-12T09:15:51.903Z HYPERVISOR: exec_cmd: nio create_udp udp-6b11d210-24dc-4624-97bd-720f9722cc42 10061 127.0.0.1 10060 
+2024-10-12T09:15:51.904Z HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-6b11d210-24dc-4624-97bd-720f9722cc42 
+2024-10-12T09:15:51.914Z HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-6b11d210-24dc-4624-97bd-720f9722cc42 1 
+2024-10-12T09:15:52.030Z HYPERVISOR: exec_cmd: nio create_udp udp-f72ce696-be66-452c-9ba9-a4333f1feeea 10064 127.0.0.1 10065 
+2024-10-12T09:15:52.030Z HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-f72ce696-be66-452c-9ba9-a4333f1feeea 
+2024-10-12T09:15:52.034Z HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-f72ce696-be66-452c-9ba9-a4333f1feeea 1 

@@ -1,0 +1,27 @@
+2024-10-12T09:15:46.815Z HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+2024-10-12T09:15:46.816Z HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41245.
+2024-10-12T09:15:46.825Z HYPERVISOR: exec_cmd: hypervisor version 
+2024-10-12T09:15:46.825Z HYPERVISOR: exec_cmd: hypervisor working_dir /home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips 
+2024-10-12T09:15:46.825Z GENERAL: working_dir=/home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips
+2024-10-12T09:15:46.826Z HYPERVISOR: exec_cmd: hypervisor working_dir /home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips/c256dc5c-565d-4f80-ac90-81cbae5c6356 
+2024-10-12T09:15:46.826Z GENERAL: working_dir=/home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips/c256dc5c-565d-4f80-ac90-81cbae5c6356
+2024-10-12T09:15:46.826Z HYPERVISOR: exec_cmd: vm create ISP 1 c3725 
+2024-10-12T09:15:46.826Z VM: VM ISP created.
+2024-10-12T09:15:46.827Z HYPERVISOR: exec_cmd: vm set_con_tcp_port ISP 5000 
+2024-10-12T09:15:46.827Z HYPERVISOR: exec_cmd: c3725 get_mac_addr ISP 
+2024-10-12T09:15:46.827Z HYPERVISOR: exec_cmd: vm set_disk0 ISP 0 
+2024-10-12T09:15:46.828Z HYPERVISOR: exec_cmd: vm get_status ISP 
+2024-10-12T09:15:46.828Z HYPERVISOR: exec_cmd: vm set_idle_pc ISP 0x60a6a1e0 
+2024-10-12T09:15:46.829Z HYPERVISOR: exec_cmd: vm set_ios ISP /home/guipc/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+2024-10-12T09:15:46.829Z HYPERVISOR: exec_cmd: c3725 set_mac_addr ISP c201.45f3.0000 
+2024-10-12T09:15:46.830Z HYPERVISOR: exec_cmd: vm set_nvram ISP 256 
+2024-10-12T09:15:46.830Z HYPERVISOR: exec_cmd: vm get_status ISP 
+2024-10-12T09:15:46.830Z HYPERVISOR: exec_cmd: vm slot_add_binding ISP 1 0 NM-1FE-TX 
+2024-10-12T09:15:46.831Z HYPERVISOR: exec_cmd: vm get_status ISP 
+2024-10-12T09:15:46.831Z HYPERVISOR: exec_cmd: vm slot_add_binding ISP 2 0 NM-4T 
+2024-10-12T09:15:53.428Z HYPERVISOR: exec_cmd: nio create_udp udp-f30e5b23-fc21-4d02-a8e0-a3b8a87a7d83 10100 127.0.0.1 10101 
+2024-10-12T09:15:53.654Z HYPERVISOR: exec_cmd: vm slot_add_nio_binding ISP 0 0 udp-f30e5b23-fc21-4d02-a8e0-a3b8a87a7d83 
+2024-10-12T09:15:53.655Z HYPERVISOR: exec_cmd: vm get_status ISP 
+2024-10-12T09:15:53.810Z HYPERVISOR: exec_cmd: nio create_udp udp-e8ba136b-fb92-4bd3-98a7-9b1e0899f4d8 10104 127.0.0.1 10105 
+2024-10-12T09:15:53.812Z HYPERVISOR: exec_cmd: vm slot_add_nio_binding ISP 0 1 udp-e8ba136b-fb92-4bd3-98a7-9b1e0899f4d8 
+2024-10-12T09:15:53.812Z HYPERVISOR: exec_cmd: vm get_status ISP 

@@ -1,0 +1,21 @@
+2024-10-12T09:15:47.062Z HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+2024-10-12T09:15:47.062Z HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 45195.
+2024-10-12T09:15:47.069Z HYPERVISOR: exec_cmd: hypervisor version 
+2024-10-12T09:15:47.069Z HYPERVISOR: exec_cmd: hypervisor working_dir /home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips 
+2024-10-12T09:15:47.069Z GENERAL: working_dir=/home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips
+2024-10-12T09:15:47.070Z HYPERVISOR: exec_cmd: ethsw create SW2 
+2024-10-12T09:15:49.993Z HYPERVISOR: exec_cmd: nio create_udp udp-bd529130-069d-429f-93c7-ef422274b4e9 10032 127.0.0.1 10033 
+2024-10-12T09:15:49.994Z HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-bd529130-069d-429f-93c7-ef422274b4e9 
+2024-10-12T09:15:49.994Z HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-bd529130-069d-429f-93c7-ef422274b4e9 1 
+2024-10-12T09:15:50.136Z HYPERVISOR: exec_cmd: nio create_udp udp-403c63f5-e4d6-4235-9e48-1bcef0390957 10034 127.0.0.1 10035 
+2024-10-12T09:15:50.137Z HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-403c63f5-e4d6-4235-9e48-1bcef0390957 
+2024-10-12T09:15:50.155Z HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-403c63f5-e4d6-4235-9e48-1bcef0390957 1 
+2024-10-12T09:15:50.285Z HYPERVISOR: exec_cmd: nio create_udp udp-e8cf297f-e202-4e3a-b1f5-b16841065897 10036 127.0.0.1 10037 
+2024-10-12T09:15:50.286Z HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-e8cf297f-e202-4e3a-b1f5-b16841065897 
+2024-10-12T09:15:50.296Z HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-e8cf297f-e202-4e3a-b1f5-b16841065897 1 
+2024-10-12T09:15:50.881Z HYPERVISOR: exec_cmd: nio create_udp udp-2cd0d739-f1d4-4f90-8870-8ef49e25cc2b 10044 127.0.0.1 10045 
+2024-10-12T09:15:50.882Z HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-2cd0d739-f1d4-4f90-8870-8ef49e25cc2b 
+2024-10-12T09:15:50.899Z HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-2cd0d739-f1d4-4f90-8870-8ef49e25cc2b 1 
+2024-10-12T09:15:51.608Z HYPERVISOR: exec_cmd: nio create_udp udp-59419471-fa6c-44a6-827e-dc50521ee087 10053 127.0.0.1 10052 
+2024-10-12T09:15:51.609Z HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-59419471-fa6c-44a6-827e-dc50521ee087 
+2024-10-12T09:15:51.626Z HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-59419471-fa6c-44a6-827e-dc50521ee087 1 
