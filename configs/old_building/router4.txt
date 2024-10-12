@@ -1,13 +1,14 @@
 conf t
+ipv6 unicast-routing
 
 int f0/0
-ip address 192.168.2.68 255.255.255.192
-ipv6 address 2100:100:100:2:1::4/80
+ip address 192.168.2.104 255.255.255.192
+ipv6 address 2100:100:100:2:1::40/80
 no shutdown
 
-inf f0/1
-ip address 192.168.2.132 255.255.255.192
-ipv6 address 2100:100:100:2:2::4/80
+int f0/1
+ip address 192.168.2.168 255.255.255.192
+ipv6 address 2100:100:100:2:2::40/80
 no shutdown
 
 router rip
@@ -15,13 +16,13 @@ version 2
 network 192.168.2.0
 no auto-summary
 
-ipv6 router rip RIPNG
+ipv6 router rip RIPng
 
 int f0/0
-ipv6 rip RIPNG enable
+ipv6 rip RIPng enable
 
 int f0/1
-ipv6 rip RIPNG enable
+ipv6 rip RIPng enable
 
 end
 write
