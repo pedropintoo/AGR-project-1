@@ -1,0 +1,19 @@
+2024-10-11T20:03:33.267Z HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+2024-10-11T20:03:33.267Z HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 45255.
+2024-10-11T20:03:33.273Z HYPERVISOR: exec_cmd: hypervisor version 
+2024-10-11T20:03:33.273Z HYPERVISOR: exec_cmd: hypervisor working_dir /home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips 
+2024-10-11T20:03:33.273Z GENERAL: working_dir=/home/guipc/LEI/3ºAno/1ºSemestre/AGR/AGR-project-1/src/project-files/dynamips
+2024-10-11T20:03:33.274Z HYPERVISOR: exec_cmd: ethsw create SW5 
+2024-10-11T20:03:35.194Z HYPERVISOR: exec_cmd: nio create_udp udp-8afb6133-8105-4192-84cf-9e9baa07b9c1 10021 127.0.0.1 10020 
+2024-10-11T20:03:35.195Z HYPERVISOR: exec_cmd: ethsw add_nio SW5 udp-8afb6133-8105-4192-84cf-9e9baa07b9c1 
+2024-10-11T20:03:35.214Z HYPERVISOR: exec_cmd: ethsw set_access_port SW5 udp-8afb6133-8105-4192-84cf-9e9baa07b9c1 1 
+2024-10-11T20:03:35.336Z HYPERVISOR: exec_cmd: nio create_udp udp-2be852f9-aaeb-4e8a-a0a7-ad8d02a8045f 10023 127.0.0.1 10022 
+2024-10-11T20:03:35.336Z HYPERVISOR: exec_cmd: ethsw add_nio SW5 udp-2be852f9-aaeb-4e8a-a0a7-ad8d02a8045f 
+2024-10-11T20:03:35.354Z HYPERVISOR: exec_cmd: ethsw set_access_port SW5 udp-2be852f9-aaeb-4e8a-a0a7-ad8d02a8045f 1 
+2024-10-11T20:03:40.180Z HYPERVISOR: exec_cmd: nio create_udp udp-4668fe7c-8e11-4f43-a1a7-0050f0c5f641 10107 127.0.0.1 10106 
+2024-10-11T20:03:40.180Z HYPERVISOR: exec_cmd: ethsw add_nio SW5 udp-4668fe7c-8e11-4f43-a1a7-0050f0c5f641 
+2024-10-11T20:03:40.187Z HYPERVISOR: exec_cmd: ethsw set_access_port SW5 udp-4668fe7c-8e11-4f43-a1a7-0050f0c5f641 1 
+2024-10-11T20:04:06.691Z HYPERVISOR: exec_cmd: ethsw delete SW5 
+2024-10-11T20:04:06.739Z HYPERVISOR: exec_cmd: hypervisor stop 
+2024-10-11T20:04:06.810Z HYPERVISOR: Stopped.
+2024-10-11T20:04:06.810Z GENERAL: reset done.
