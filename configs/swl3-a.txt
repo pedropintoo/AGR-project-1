@@ -1,20 +1,14 @@
 vlan database
 vlan 1
-vlan 2
-vlan 3
 exit
 
 conf t
 ip routing
 ipv6 unicast-routing
 
-int range f1/12 - 13
+int range f1/10 - 11
 switchport mode access
-switchport access vlan 2
-
-int range f1/14 - 15
-switchport mode access
-switchport access vlan 3
+switchport access vlan 1
 
 int range f1/1 - 2
 switchport mode trunk
@@ -27,18 +21,6 @@ no autostate
 ipv6 enable
 ip add 192.168.3.1 255.255.255.0
 ipv6 add 2100:100:100:3::1/80
-
-int vlan 2
-no shut
-no autostate
-ip add 192.168.4.1 255.255.255.0
-ipv6 add 2100:100:100:4::1/80
-
-int vlan 3
-no shut
-no autostate
-ip add 192.168.5.1 255.255.255.0
-ipv6 add 2100:100:100:5::1/80
 
 end
 write
