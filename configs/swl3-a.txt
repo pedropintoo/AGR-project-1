@@ -24,17 +24,21 @@ switchport trunk encapsulation dot1q
 int vlan 1
 no shut
 no autostate
+ipv6 enable
 ip add 192.168.3.1 255.255.255.0
+ipv6 add 2100:100:100:3::1/80
 
 int vlan 2
 no shut
 no autostate
 ip add 192.168.4.1 255.255.255.0
+ipv6 add 2100:100:100:4::1/80
 
 int vlan 3
 no shut
 no autostate
 ip add 192.168.5.1 255.255.255.0
+ipv6 add 2100:100:100:5::1/80
 
 end
 write

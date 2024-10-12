@@ -3,10 +3,20 @@ vlan 1
 exit
 
 conf t
+no ip routing
+
+interface vlan 1
+no shut
 
 int range f1/2 - 3
+no shut
 switchport mode access
 switchport access vlan 1
+
+int range f1/0 - 1
+switchport mode trunk
+switchport trunk allowed vlan 1,1002-1005
+switchport trunk encapsulation dot1q
 
 end 
 write
