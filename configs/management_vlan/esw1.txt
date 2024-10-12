@@ -1,0 +1,14 @@
+vlan database
+vlan 1
+exit
+
+conf t
+
+int range f1/2 - 3
+switchport mode access
+switchport access vlan 1
+
+end 
+write
+
+
