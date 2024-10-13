@@ -25,12 +25,36 @@ switchport mode trunk
 switchport trunk allowed vlan 1,2,3,1002-1005
 switchport trunk encapsulation dot1q
 
+int f2/0
+no shut
+ipv6 enable 
+ip add 192.168.10.1 255.255.255.0
+ipv6 add 2100:100:100:10::1/64
+
+int f0/0
+no shut
+ipv6 enable
+ip add 192.168.7.1 255.255.255.0
+ipv6 add 2100:100:100:7::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
+int f0/1
+no shut
+ipv6 enable
+ip add 192.168.1.1 255.255.255.0
+ipv6 add 2100:100:100:1::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
 int vlan 1
 no shut
 no autostate
 ipv6 enable
 ip add 192.168.3.1 255.255.255.0
 ipv6 add 2100:100:100:3::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
 
 int vlan 2
 no shut
@@ -38,6 +62,8 @@ no autostate
 ipv6 enable
 ip add 192.168.4.1 255.255.255.0
 ipv6 add 2100:100:100:4::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
 
 int vlan 3
 no shut
@@ -45,6 +71,20 @@ no autostate
 ipv6 enable
 ip add 192.168.5.1 255.255.255.0
 ipv6 add 2100:100:100:5::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+exit
+
+ip route 192.168.6.0 255.255.255.0 192.168.10.5
+ipv6 route 2100:100:100:6::/64 2100:100:100:10::5
+
+router ospf 1
+redistribute static subnets
+redistribute connected
+
+ipv6 router ospf 1
+redistribute static
+redistribute connected
 
 end
 write

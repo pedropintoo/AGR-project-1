@@ -1,0 +1,24 @@
+conf t
+ipv6 unicast-routing
+
+int f0/0
+no shut
+ipv6 enable
+no ip add
+no ipv6 add
+ip address 210.10.10.249 255.255.255.248
+ipv6 address 2100:A:A::249/64
+
+int f0/1
+no shut
+ipv6 enable
+ip address 210.10.9.2 255.255.255.248
+ipv6 address 2100:A:A:9::2/64
+exit
+
+ip route 191.1.1.0 255.255.255.128 210.10.10.251
+ipv6 route 2100:100:100::/60 2100:A:A::251
+
+end
+write
+
