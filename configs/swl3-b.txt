@@ -32,6 +32,14 @@ ip add 192.168.11.2 255.255.255.0
 ipv6 add 2100:100:100:11::2/64
 ipv6 rip RIPng enable
 
+int f0/0
+no shut
+ipv6 enable
+ip add 192.168.9.2 255.255.255.0
+ipv6 add 2100:100:100:9::2/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
 int f2/0
 no shut
 ipv6 enable
@@ -83,6 +91,7 @@ redistribute rip subnets
 
 ipv6 router ospf 1
 redistribute rip RIPng
+redistribute connected
 
 end
 write

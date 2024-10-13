@@ -31,6 +31,14 @@ ipv6 enable
 ip add 192.168.10.1 255.255.255.0
 ipv6 add 2100:100:100:10::1/64
 
+int f0/0
+no shut
+ipv6 enable
+ip add 192.168.7.1 255.255.255.0
+ipv6 add 2100:100:100:7::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+
 int f0/1
 no shut
 ipv6 enable
@@ -72,9 +80,11 @@ ipv6 route 2100:100:100:6::/64 2100:100:100:10::5
 
 router ospf 1
 redistribute static subnets
+redistribute connected
 
 ipv6 router ospf 1
 redistribute static
+redistribute connected
 
 end
 write
