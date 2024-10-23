@@ -6,6 +6,7 @@ no shut
 ipv6 enable
 ip address 210.10.10.252 255.255.255.248
 ipv6 address 2100:A:A::252/64
+ip nat outside
 
 int f0/1
 no shut
@@ -14,6 +15,7 @@ ip address 192.168.8.20 255.255.255.0
 ipv6 address 2100:100:100:8::20/64
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
+ip nat inside
 
 int f1/0
 no shut
@@ -22,25 +24,18 @@ ip address 192.168.9.20 255.255.255.0
 ipv6 address 2100:100:100:9::20/64
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
+ip nat inside
 
-no ip route 0.0.0.0 0.0.0.0 210.10.10.249
+ip route 0.0.0.0 0.0.0.0 210.10.10.249
+ipv6 route ::/0 2100:A:A::249
 
 router ospf 1
-no default-information originate always
+default-information originate always
 
 ipv6 router ospf 1
-no default-information originate always
+default-information originate always
 
-access-list 1 permit 192.168.6.0 0.0.0.255
-access-list 2 permit 192.168.4.0 0.0.0.255
-access-list 3 permit 192.168.1.0 0.0.0.255
-access-list 4 permit 192.168.0.0 0.0.0.255
-access-list 5 permit 192.168.8.0 0.0.0.255
-
-ip nat pool SITE_B 191.1.1.1 191.1.1.30 netmask 255.255.255.224
-ip nat pool ENG 191.1.1.33 191.1.1.46 netmask 255.255.255.240
-ip nat pool DC 191.1.1.49 191.1.1.62 netmask 255.255.255.240
-ip nat pool DMZ 191.1.1.65 191.1.1.78 netmask 255.255.255.240
+access-list 1 permit 192.168.0.0 0.0.255.255
 ip nat pool NAT 191.1.1.81 191.1.1.94 netmask 255.255.255.240
 
 ip nat Stateful id 2
@@ -48,12 +43,7 @@ backup 192.168.8.20
 peer 192.168.8.10
 mapping-id 10
 
-ip nat inside source list 1 pool SITE_B mapping-id 10 overload
-ip nat inside source list 2 pool ENG mapping-id 10 overload
-ip nat inside source list 3 pool DC mapping-id 10 overload
-ip nat inside source list 4 pool DMZ mapping-id 10 overload
-ip nat inside source list 5 pool NAT mapping-id 10 overload
+ip nat inside source list 1 pool NAT mapping-id 10 overload
 
 end
 write
-
