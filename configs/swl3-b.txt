@@ -44,6 +44,7 @@ int f2/0
 no shut
 ipv6 enable
 ip add 192.168.1.2 255.255.255.0
+ip add 191.1.1.52 255.255.255.240 secondary
 ipv6 add 2100:100:100:1::2/64
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
@@ -62,6 +63,7 @@ no shut
 no autostate
 ipv6 enable
 ip add 192.168.4.2 255.255.255.0
+ip add 191.1.1.34 255.255.255.240 secondary
 ipv6 add 2100:100:100:4::2/64
 ip ospf 1 area 0
 ipv6 ospf 1 area 0
