@@ -1,3 +1,11 @@
+# 3ano/1semestre/AGR/AGR-project-1
+
+# Nota: 20
+
+Pedro Pinto (115304)
+
+Guilherme Santos (113893)
+
 # AGR-project-1
 
 # Network Addressing
